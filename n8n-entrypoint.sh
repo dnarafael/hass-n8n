@@ -100,8 +100,8 @@ echo "WEBHOOK_URL: ${WEBHOOK_URL}"
 
 if [ "$#" -gt 0 ]; then
   # Got started with arguments
-  exec n8n "${N8N_CMD_LINE}"
+  exec n8n --userFolder="${N8N_USER_FOLDER}" ${N8N_CMD_LINE}
 else
   # Got started without arguments
-  exec n8n
+  exec n8n --userFolder="${N8N_USER_FOLDER}"
 fi

@@ -29,8 +29,8 @@ IFS=$'\n' read -r -d '' -a array <<< "$values"
 # Export keys and values
 for element in "${array[@]}"
 do
-    key="${element%%=*}"
-    value="${element#*=}"
+    key="${element%%:*}"
+    value="${element#*:}"
     key="$(echo "$key" | xargs | tr -d '\r\n')"
     value="$(echo "$value" | xargs | tr -d '\r\n')"
     if [[ -n "$key" ]]; then

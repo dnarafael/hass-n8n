@@ -14,4 +14,4 @@ RUN apk add --no-cache --update \
     envsubst
 WORKDIR /data
 
-CMD ["n8n"]
+

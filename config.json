@@ -21,11 +21,11 @@
   "panel_icon": "mdi:sitemap-outline",
   "webui": "http://[HOST]:[PORT:5690]/",
   "map": [
-    "ssl:ro",
-    "backup:rw",
-    "share:rw",
-    "media:rw",
-    "config:ro"
+  "ssl:ro",
+  "backup:rw",
+  "share:rw",
+  "media:rw",
+  "config:rw"
   ],
   "ingress": true,
   "ingress_port": 5690,
@@ -49,5 +49,6 @@
   "str"
     ],
     "cmd_line_args": "str?"
-  }
+  },
+  "tmpfs": true
 }

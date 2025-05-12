@@ -31,9 +31,12 @@ for element in "${array[@]}"
 do
     key="${element%%:*}"
     value="${element#*:}"
-    value=$(echo "$value" | xargs) # Remove leading and trailing whitespace
-    export "$key"="$value"
-    echo "exported ${key}=${value}"
+    key="$(echo "$key" | xargs | tr -d '\r\n')"
+    value="$(echo "$value" | xargs | tr -d '\r\n')"
+    if [[ -n "$key" ]]; then
+        export "$key"="$value"
+        echo "exported $key=$value"
+    fi
 done
 
 # IF NODE_FUNCTION_ALLOW_EXTERNAL is set, install the required packages

@@ -46,7 +46,7 @@
   "schema": {
     "timezone": "str",
     "env_vars_list": [
-      "match(^[A-Z_0-9]+: .*$)"
+  "str"
     ],
     "cmd_line_args": "str?"
   }
